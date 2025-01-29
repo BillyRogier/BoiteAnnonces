@@ -22,10 +22,16 @@ npm install
 Créer un fichier `.env` et ajouter :
 
 ```makefile
+PORT=5000
 MONGO_URI=mongodb://localhost:27017/boiteannonces
-JWT_SECRET=supersecret
-REDIS_HOST=127.0.0.1
-REDIS_PORT=6379
+JWT_SECRET=supersecretkey
+COOKIE_SECRET=anothersecretkey
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+GOOGLE_REDIRECT_URI=http://localhost:5000/api/auth/google/callback
 ```
 
 ### 4. Lancer le serveur :
@@ -48,6 +54,8 @@ L’API tournera sur `http://localhost:5000`.
 | Méthode | Endpoint           | Description              |
 | ------- | ------------------ | ------------------------ |
 | POST    | `/api/auth/signup` | Inscription utilisateur  |
+| POST    | `/api/auth/google` | Inscription google       |
+| POST    | `/api/auth/github` | Inscription github       |
 | POST    | `/api/auth/login`  | Connexion utilisateur    |
 | POST    | `/api/ads`         | Créer une annonce 🔒     |
 | GET     | `/api/ads`         | Lister les annonces      |
