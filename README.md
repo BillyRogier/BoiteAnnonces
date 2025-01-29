@@ -7,7 +7,7 @@ BoiteAnnonces est une API REST permettant aux utilisateurs de publier et gérer 
 ### 1. Cloner le projet :
 
 ```bash
-git clone https://github.com/ton-utilisateur/BoiteAnnonces.git
+git clone https://github.com/BillyRogier/BoiteAnnonces.git
 cd BoiteAnnonces
 ```
 
